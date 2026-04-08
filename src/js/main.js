@@ -2,12 +2,26 @@ import padraoRespostas from "./respostas.js";
 
 console.log("padraoRespostas", padraoRespostas);
 
-
+//Pegar elementos do documento//
 const messagesdiv = document.getElementById("chat");
 const input = document.getElementById("userInput");
 const sendButton = document.getElementById("sendBtn");
 const botStatus = document.getElementById("botstatus");
 
+//Checar se a caixa de texto está focada, se sim mudar a cor de fundo//
+let isFocused = false;
+input.addEventListener("focus", () => {
+    isFocused = true;
+    input.style.backgroundColor = "#1b0e25";
+});
+
+input.addEventListener("blur", () => {
+    isFocused = false;
+    input.style.backgroundColor = "";
+});
+
+
+//Eventos para enviar as mensagens com clique no botão ou enter//
 sendButton.addEventListener("click", sendMessage);
 
 input.addEventListener("keypress", function (e) {
@@ -16,25 +30,26 @@ input.addEventListener("keypress", function (e) {
     }
 });
 
-
+//Funções do Chat//
 function sendMessage() {
     const userMessage = input.value.trim();
     if (userMessage === "") return;
 
     appendMessage("user", userMessage);
     input.value = "";
-    botStatus.textContent = "Online";
+    botStatus.textContent = "Digitando...";
     //typing balloon
     let tempmsg = appendMessage("bot", "•••");
     setTimeout(() => {
         const botResponse = getBotResponse(userMessage);
         appendMessage("bot", botResponse);
         messagesdiv.removeChild(tempmsg);
-    }, 1000);
+        botStatus.textContent = "Online";
+    }, 2000);
 
     setTimeout(() => {
         botStatus.textContent = "Ausente";
-    }, 3000);
+    }, 4000);
 }
 
 function appendMessage(sender, message) {
@@ -48,7 +63,7 @@ function appendMessage(sender, message) {
 
 
 function getBotResponse(userMessage) {
-    const lowerMessage = userMessage.toLowerCase();
+    const lowerMessage = userMessage.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
     for (const key in padraoRespostas) {
         const keyParts = key.toLowerCase().split(/[\s_]+/); 
         
@@ -64,5 +79,6 @@ function getBotResponse(userMessage) {
             }
         }
     }
-    return "Desculpe, não entendi. Pode reformular?";
+    const responses = padraoRespostas["default"];
+    return responses[Math.floor(Math.random() * responses.length)];
 }
