@@ -1,44 +1,46 @@
 body {
-  background-color: #f8f9fa;
+  background-color: #121212;
   font-family: 'Segoe UI', sans-serif;
 }
 
 .header-custom {
-  background: linear-gradient(90deg, #6f42c1, #8a63d2);
+  background: linear-gradient(90deg, #5f00d3, #6d25c4,#9b5de5);
 }
 
 .chat-area {
   height: 760px;
   overflow-y: auto;
-  background-color: #ffffff;
+  background-color: #181818;
 }
 
 .message {
   padding: 10px 14px;
-  border-radius: 12px;
+  border-radius: 20px;
   margin-bottom: 10px;
-  max-width: 75%;
+  max-width: 70%;
   font-size: 14px;
 }
 
 .user {
-  background-color: #e2d9f3;
+  background-color: #9b5de5;
+  color: white;
   margin-left: auto;
-  text-align: right;
 }
 
 .bot {
-  background-color: #fff3cd;
-  margin-right: auto;
+  background-color: #2a2a2a;
+  color: #b3b3b3;
 }
 
 button {
+  background-color: #8330cc;
   font-weight: bold;
   transition: 0.2s;
 }
 
 button:hover {
   transform: scale(1.05);
+  background-color: #7b2cbf;
 }
 
 .chat-area::-webkit-scrollbar {
@@ -46,6 +48,6 @@ button:hover {
 }
 
 .chat-area::-webkit-scrollbar-thumb {
-  background-color: #6f42c1;
+  background-color: #5600f5;
   border-radius: 10px;
 }
