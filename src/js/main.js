@@ -6,6 +6,7 @@ console.log("padraoRespostas", padraoRespostas);
 const messagesdiv = document.getElementById("chat");
 const input = document.getElementById("userInput");
 const sendButton = document.getElementById("sendBtn");
+const botStatus = document.getElementById("botstatus");
 
 sendButton.addEventListener("click", sendMessage);
 
@@ -22,6 +23,7 @@ function sendMessage() {
 
     appendMessage("user", userMessage);
     input.value = "";
+    botStatus.textContent = "Online";
     //typing balloon
     let tempmsg = appendMessage("bot", "•••");
     setTimeout(() => {
@@ -29,6 +31,10 @@ function sendMessage() {
         appendMessage("bot", botResponse);
         messagesdiv.removeChild(tempmsg);
     }, 1000);
+
+    setTimeout(() => {
+        botStatus.textContent = "Ausente";
+    }, 3000);
 }
 
 function appendMessage(sender, message) {
