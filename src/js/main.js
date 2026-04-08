@@ -2,12 +2,26 @@ import padraoRespostas from "./respostas.js";
 
 console.log("padraoRespostas", padraoRespostas);
 
-
+//Pegar elementos do documento//
 const messagesdiv = document.getElementById("chat");
 const input = document.getElementById("userInput");
 const sendButton = document.getElementById("sendBtn");
 const botStatus = document.getElementById("botstatus");
 
+//Checar se a caixa de texto está focada, se sim mudar a cor de fundo//
+let isFocused = false;
+input.addEventListener("focus", () => {
+    isFocused = true;
+    input.style.backgroundColor = "#1b0e25";
+});
+
+input.addEventListener("blur", () => {
+    isFocused = false;
+    input.style.backgroundColor = "";
+});
+
+
+//Eventos para enviar as mensagens com clique no botão ou enter//
 sendButton.addEventListener("click", sendMessage);
 
 input.addEventListener("keypress", function (e) {
@@ -16,7 +30,7 @@ input.addEventListener("keypress", function (e) {
     }
 });
 
-
+//Funções do Chat//
 function sendMessage() {
     const userMessage = input.value.trim();
     if (userMessage === "") return;
