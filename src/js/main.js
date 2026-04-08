@@ -49,7 +49,7 @@ function appendMessage(sender, message) {
 
 
 function getBotResponse(userMessage) {
-    const lowerMessage = userMessage.toLowerCase();
+    const lowerMessage = userMessage.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
     for (const key in padraoRespostas) {
         const keyParts = key.toLowerCase().split(/[\s_]+/); 
         
@@ -65,5 +65,6 @@ function getBotResponse(userMessage) {
             }
         }
     }
-    return "Desculpe, não entendi. Pode reformular?";
+    const responses = padraoRespostas["default"];
+    return responses[Math.floor(Math.random() * responses.length)];
 }

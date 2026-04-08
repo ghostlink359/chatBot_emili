@@ -1,8 +1,4 @@
 const padroesRespostas = {
-  "Olá": [
-    "Oi! Bora falar de música? 🎧",
-    "Olá! Qual a boa musical de hoje? 🎵"
-  ],
   "Ola": [
     "Oi! Bora falar de música? 🎧",
     "Olá! Qual a boa musical de hoje? 🎵"
@@ -10,10 +6,6 @@ const padroesRespostas = {
   "Oi": [
     "Oi! Bora falar de música? 🎧",
     "Olá! Qual a boa musical de hoje? 🎵"
-  ],
-  "você": [
-    "Sou o MusicBot, seu assistente musical!",
-    "Sou um robô que ama música."
   ],
   "voce": [
     "Sou o MusicBot, seu assistente musical!",
@@ -23,17 +15,9 @@ const padroesRespostas = {
     "Curto Rock e Pop! 🎸",
     "Gosto muito de música eletrônica. 💻"
   ],
-  "música": [
-    "Ouça 'Bohemian Rhapsody' do Queen.",
-    "Recomendo 'Blinding Lights' do The Weeknd."
-  ],
   "musica": [
     "Ouça 'Bohemian Rhapsody' do Queen.",
     "Recomendo 'Blinding Lights' do The Weeknd."
-  ],
-  "álbum": [
-    "'Dark Side of the Moon' - Pink Floyd.",
-    "'Thriller' - Michael Jackson."
   ],
   "album": [
     "'Dark Side of the Moon' - Pink Floyd.",
@@ -47,7 +31,7 @@ const padroesRespostas = {
     "Led Zeppelin é clássico.",
     "The Beatles, não tem erro."
   ],
-  "Ouvir música": [
+  "Ouvir musica": [
     "No Spotify.",
     "No YouTube Music."
   ],
@@ -56,7 +40,13 @@ const padroesRespostas = {
     "Hoje em dia as músicas são mais curtas, uns 2 ou 3 minutos.",
     "'Parabéns pra Você' é a música mais famosa do mundo!",
     "A música mais cantada no mundo é o 'Feliz Aniversário'."
+  ],
+  "default": [
+    "Desculpe, não entendi. Pode reformular?",
+    "Hmm, não tenho uma resposta pra isso. Tente outra coisa!",
+    "Hmm, poderia me explicar melhor? Não entendi direito."
   ]
+  
 };
 
 export default padroesRespostas;
