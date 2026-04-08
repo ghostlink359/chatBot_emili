@@ -3,7 +3,19 @@ const padroesRespostas = {
     "Oi! Bora falar de música? 🎧",
     "Olá! Qual a boa musical de hoje? 🎵"
   ],
-  "Quem é você?": [
+  "Ola": [
+    "Oi! Bora falar de música? 🎧",
+    "Olá! Qual a boa musical de hoje? 🎵"
+  ],
+  "Oi": [
+    "Oi! Bora falar de música? 🎧",
+    "Olá! Qual a boa musical de hoje? 🎵"
+  ],
+  "você": [
+    "Sou o MusicBot, seu assistente musical!",
+    "Sou um robô que ama música."
+  ],
+  "voce": [
     "Sou o MusicBot, seu assistente musical!",
     "Sou um robô que ama música."
   ],
@@ -15,7 +27,15 @@ const padroesRespostas = {
     "Ouça 'Bohemian Rhapsody' do Queen.",
     "Recomendo 'Blinding Lights' do The Weeknd."
   ],
+  "musica": [
+    "Ouça 'Bohemian Rhapsody' do Queen.",
+    "Recomendo 'Blinding Lights' do The Weeknd."
+  ],
   "álbum": [
+    "'Dark Side of the Moon' - Pink Floyd.",
+    "'Thriller' - Michael Jackson."
+  ],
+  "album": [
     "'Dark Side of the Moon' - Pink Floyd.",
     "'Thriller' - Michael Jackson."
   ],
