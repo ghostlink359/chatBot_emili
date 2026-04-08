@@ -26,7 +26,7 @@ html, body {
     overflow-y: auto;
     padding: 15px;
     background: linear-gradient(180deg,
-            #2e0085 0%,
+            #680BAB 0%,
             #1a0f2e 30%,
             #121212 55%,
             #0b0b0b 100%);
@@ -51,7 +51,7 @@ html, body {
 }
 
 .user {
-    background: #7b2cbf;
+    background: #7A30B0;
     color: white;
     margin-left: auto;
 }
@@ -62,13 +62,13 @@ html, body {
 }
 
 .btn {
-    background: #7b2cbf;
+    background: #7a30b0;
     border: none;
     color: white;
 }
 
 .btn:hover {
-    background: #5a189a;
+    background: #680bab;
     color: white;
     
 }

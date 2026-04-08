@@ -10,8 +10,8 @@ Instale a extensão "Live Server" na loja do VSCode e clique no botão "Go Live"
 
 ### Comandos e Palavras Chave
 
-"Olá, oi, ola"
-"você, voce"
+"Olá"
+"você"
 "favorito"
 "música"
 "álbum"
