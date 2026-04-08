@@ -23,18 +23,19 @@ function sendMessage() {
 
     appendMessage("user", userMessage);
     input.value = "";
-    botStatus.textContent = "Online";
+    botStatus.textContent = "Digitando...";
     //typing balloon
     let tempmsg = appendMessage("bot", "•••");
     setTimeout(() => {
         const botResponse = getBotResponse(userMessage);
         appendMessage("bot", botResponse);
         messagesdiv.removeChild(tempmsg);
-    }, 1000);
+        botStatus.textContent = "Online";
+    }, 2000);
 
     setTimeout(() => {
         botStatus.textContent = "Ausente";
-    }, 3000);
+    }, 4000);
 }
 
 function appendMessage(sender, message) {
