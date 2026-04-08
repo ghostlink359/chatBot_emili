@@ -1,42 +1,42 @@
 const padroesRespostas = {
-  saudacao: [
+  "Olá": [
     "Oi! Bora falar de música? 🎧",
     "Olá! Qual a boa musical de hoje? 🎵"
   ],
-  quem_e_vc: [
+  "Quem é você?": [
     "Sou o MusicBot, seu assistente musical!",
     "Sou um robô que ama música."
   ],
-  genero_favorito: [
+  "favorito": [
     "Curto Rock e Pop! 🎸",
     "Gosto muito de música eletrônica. 💻"
   ],
-  recomendacao_musica: [
+  "música": [
     "Ouça 'Bohemian Rhapsody' do Queen.",
     "Recomendo 'Blinding Lights' do The Weeknd."
   ],
-  recomendacao_album: [
+  "álbum": [
     "'Dark Side of the Moon' - Pink Floyd.",
     "'Thriller' - Michael Jackson."
   ],
-  recomendacao_artista: [
+  "artista": [
     "Escute David Bowie.",
     "Recomendo Beyoncé."
   ],
-  recomendacao_banda: [
+  "banda": [
     "Led Zeppelin é clássico.",
     "The Beatles, não tem erro."
   ],
-  onde_ouvir_musica: [
+  "Ouvir música": [
     "No Spotify.",
     "No YouTube Music."
   ],
-  curiosidade_duracao: [
+  "curiosidade": [
     "Músicas pop duram em média 3 minutos.",
-    "Hoje em dia as músicas são mais curtas, uns 2 ou 3 minutos."
-  ],
-  curiosidade_feliz_aniversario: [
+    "Hoje em dia as músicas são mais curtas, uns 2 ou 3 minutos.",
     "'Parabéns pra Você' é a música mais famosa do mundo!",
     "A música mais cantada no mundo é o 'Feliz Aniversário'."
   ]
 };
+
+export default padroesRespostas;
